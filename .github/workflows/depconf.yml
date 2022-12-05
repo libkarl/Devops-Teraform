@@ -13,10 +13,11 @@ env:
 
 jobs:
   deploy-infra: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
-     - name: Checkout
+      - name: Checkout
         uses: actions/checkout@v2
-     - name: Setup Terraform
+      - name: Setup Terraform
        uses: hashicorp/setup-terraform@v1
         with:
          terraform_wrapper: false
