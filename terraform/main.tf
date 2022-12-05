@@ -1,12 +1,12 @@
 terraform {
     required_providers {
       aws = {
-        sources = "hashicorp/aws"
+        source = "hashicorp/aws"
         version = "~>4.0"
       }
     }
     backend "s3" {
-      key = "aws/ec2-deúůpy/terraform.tfstate"
+      key = "aws/ec2-deploy/terraform.tfstate"
     }
 }
 
@@ -26,7 +26,7 @@ resource "aws_instance" "server" {
     host = self.public_ip
     user = "ubuntu"
     private_key = var.private_key
-    timeout = "4n"
+    timeout = "4m"
   }
   tags = {
     "name" = "DeployVM"
