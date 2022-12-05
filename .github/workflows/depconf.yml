@@ -13,7 +13,7 @@ env:
 
 jobs:
   deploy-infra:
-    runs-on: ubuntu-latest
+    runs-on: ubunut-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
